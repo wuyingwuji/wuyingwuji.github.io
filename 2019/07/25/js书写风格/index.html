@@ -4,8 +4,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 给搜索引擎看的">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="js书写风格, 给搜索引擎看的">
+    <meta name="description" content="采用默认参数精简代码反例:function writeForumComment(subject, body) {
+  subject = subject || &#39;No Subject&#39;;
+  body = body || &#39;No text&#39;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Sylvia</title>
+    <title>js书写风格 | Sylvia</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -242,13 +244,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        js书写风格
                     </div>
                 </div>
             </div>
@@ -357,9 +359,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/js/" target="_blank">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -370,7 +376,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-18
+                    2019-07-25
                 </div>
 
                 
@@ -386,15 +392,54 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h3 id="采用默认参数精简代码"><a href="#采用默认参数精简代码" class="headerlink" title="采用默认参数精简代码"></a>采用默认参数精简代码</h3><h4 id="反例"><a href="#反例" class="headerlink" title="反例:"></a>反例:</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">writeForumComment</span><span class="token punctuation">(</span>subject<span class="token punctuation">,</span> body<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  subject <span class="token operator">=</span> subject <span class="token operator">||</span> <span class="token string">'No Subject'</span><span class="token punctuation">;</span>
+  body <span class="token operator">=</span> body <span class="token operator">||</span> <span class="token string">'No text'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="正例"><a href="#正例" class="headerlink" title="正例:"></a>正例:</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">writeForumComment</span><span class="token punctuation">(</span>subject <span class="token operator">=</span> <span class="token string">'No subject'</span><span class="token punctuation">,</span> body <span class="token operator">=</span> <span class="token string">'No text'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="不要写全局函数"><a href="#不要写全局函数" class="headerlink" title="不要写全局函数"></a>不要写全局函数</h3><p>在 JS 中污染全局是一个非常不好的实践，这么做可能和其他库起冲突，且调用你的 API 的用户在实际环境中得到一个 exception 前对这一情况是一无所知的。</p>
+<p>想象以下例子：如果你想扩展 JS 中的 Array，为其添加一个 diff 函数显示两个数组间的差异，此时应如何去做？你可以将 diff 写入 Array.prototype，但这么做会和其他有类似需求的库造成冲突。如果另一个库对 diff 的需求为比较一个数组中首尾元素间的差异呢？</p>
+<p>使用 ES6 中的 class 对全局的 Array 做简单的扩展显然是一个更棒的选择。</p>
+<h4 id="反例-1"><a href="#反例-1" class="headerlink" title="反例:"></a>反例:</h4><pre class=" language-js"><code class="language-js">Array<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>diff <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>comparisonArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">of</span> comparisonArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      values<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> values<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="正例-1"><a href="#正例-1" class="headerlink" title="正例:"></a>正例:</h4><pre class=" language-js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">SuperArray</span> <span class="token keyword">extends</span> <span class="token class-name">Array</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">diff</span><span class="token punctuation">(</span>comparisonArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> hash <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">of</span> comparisonArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">of</span> <span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        values<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> values<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -553,9 +598,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hello World》
+                    《js书写风格》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/18/hello-world/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/07/25/js书写风格/" property="cc:attributionName"
                rel="cc:attributionURL">
                 无影无迹
             </a> 采用
@@ -599,45 +644,34 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/18/黑客与画家/">
+                <a href="/2019/08/07/设计一个vue-table组件/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="如何评价『黑客与画家』">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="设计一个vue table组件">
                         
-                        <span class="card-title">如何评价『黑客与画家』</span>
+                        <span class="card-title">设计一个vue table组件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            传送门：黑客与画家:硅谷创业之父Paul Graham文集
-一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。他没有送给我
+                            table分为两个组件 table.vue、table-column.vue,使用如下要求 良好的扩展性
+&lt;fat-table :data="tableDemoData">
+  &lt;template slot-scope="{ i
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-07
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/book/" class="post-category" target="_blank">
-                                    book
-                                </a>
-                            
+                            <i class="fa fa-user fa-fw"></i>
+                            无影无迹
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/book/" target="_blank">
-                        <span class="chip bg-color">book</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -646,27 +680,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/18/hello-world/">
+                <a href="/2019/07/19/Markdown 语法 (简体中文版)/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Markdown 语法 (简体中文版)">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Markdown 语法 (简体中文版)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            NOTE: This is Simplelified  Chinese Edition Document of Markdown Syntax. If you are seeking for English Edition Document
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-19
                             </span>
                         <span class="publish-author">
                             
@@ -676,7 +710,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/markdown/" target="_blank">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
